@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     echo "INFO: Build step has been started"
-                    echo `Current folder $(pwd)`
+                    echo $(pwd)
                     echo "Installing project dependencies"
                     npm install
                     echo "Installed all dependencies"
