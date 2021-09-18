@@ -18,6 +18,7 @@ pipeline {
                     sh 'pm2 stop personal-portfolio && pm2 delete personal-portfolio || true'
                     echo "Launching new process"
                     sh 'PORT=1338 pm2 start app.js -n personal-portfolio'
+                    sh 'pm2 save'
                     echo "Deployment completed"
             }
         }
