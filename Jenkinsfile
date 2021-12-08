@@ -1,6 +1,11 @@
 pipeline {
     agent { node { label 'development' }}
     stages {
+        stage ("setup") {
+            echo "Setting up Git User:"
+            sh 'git config user.name dharmit036'
+            sh 'git config user.email dsaradva@gmail.com'
+        }
         stage ("build"){
             steps {
                     echo "INFO: Build step has been started"
