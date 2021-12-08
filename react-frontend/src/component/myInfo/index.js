@@ -40,8 +40,7 @@ class Intro extends Component {
                   </tr>
                   <tr>
                     <td>
-                      <b>Profession:</b> DevOps Engineer, Part-time Full Stack
-                      Engineer
+                      <b>Profession:</b> DevOps Engineer, Part-time backend developer
                     </td>
                   </tr>
                 </tbody>
@@ -61,12 +60,12 @@ class Intro extends Component {
                 <tbody>
                   <tr>
                     <td>
-                      <b>Experience Level:</b> Junior Engineer
+                      <b>Experience Level:</b> DevOps Developer
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <b>Experience (in years):</b> 1
+                      <b>Experience (in years):</b> 2
                     </td>
                   </tr>
                   <tr>
