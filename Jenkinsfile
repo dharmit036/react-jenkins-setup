@@ -23,7 +23,7 @@ pipeline {
         stage ("deploy"){
             steps {
                     sudo chmod +x deploy.sh
-                    sh deploy.sh
+                    sh deploy.sh $(pwd)
                     echo "Deployment completed"
             }
         }
