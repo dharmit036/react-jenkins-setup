@@ -22,11 +22,8 @@ pipeline {
         }
         stage ("deploy"){
             steps {
-                    echo "Stopping old processes"
-                    sh 'pm2 stop personal-portfolio && pm2 delete personal-portfolio || true'
-                    echo "Launching new process"
-                    sh 'PORT=1338 pm2 start app.js -n personal-portfolio'
-                    sh 'pm2 save'
+                    sudo chmod +x deploy.sh
+                    sh deploy.sh
                     echo "Deployment completed"
             }
         }
