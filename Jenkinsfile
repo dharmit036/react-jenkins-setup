@@ -1,5 +1,7 @@
 pipeline {
-    agent { node { label 'development' }}
+    agent { node { 
+        checkout scm
+        label 'development' }}
     stages {
         stage ("setup") {
             steps{
