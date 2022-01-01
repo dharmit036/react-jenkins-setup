@@ -27,5 +27,17 @@ pipeline {
                     echo "Deployment completed"
             }
         }
+        post{
+            success {
+                    sh 'sudo chmod +x $(pwd)/deploy.sh'
+                    sh '$(pwd)/deploy.sh $(pwd)'
+                    echo "Pipeline executed successfully...."
+            }
+            failure {
+                
+                echo "Something went wrong with build id: ${BUILD_ID}"
+                echo "Check more info at: ${BUILD_URL}"
+            }
+        }
     }
 }
